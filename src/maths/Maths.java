@@ -1,5 +1,9 @@
 package maths;
 
+import java.awt.Point;
+
+import javafx.geometry.Point2D;
+
 public class Maths 
 {
 	public static int mPGCD(int pDividende, int pDiviseur)
