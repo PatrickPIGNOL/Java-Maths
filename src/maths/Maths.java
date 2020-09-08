@@ -36,7 +36,17 @@ public class Maths
 		return Math.abs(pA * pB) / Maths.mPGCD(pA, pB);
 	}
 	
-	public static double mHypothenuse()
-	//a2 = b2 + c2 -2bc * cos(A);
-	//A/sin(A) = b/sin(B) = c/sin(C);
+	public static double mSquare(double pValue)
+	{
+		return pValue * pValue;
+	}
+	
+	public static double mHypothenuse(double pSideB, double pSideC, double pAngleA)
+	{
+		return Math.sqrt(Maths.mSquare(pSideB)+Maths.mSquare(pSideC) - 2 * pSideB * pSideC * Math.cos(Math.toRadians(pAngleA)));
+	}
+	public static double mHypothenuse(double pSideB, double pSideC)
+	{
+		return Math.sqrt(Maths.mSquare(pSideB) + Maths.mSquare(pSideC));
+	}
 }
